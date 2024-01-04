@@ -1,23 +1,25 @@
 #!/usr/bin/python3
 """
+Module 2-rectangle
 Defines a class Rectangle with private
-instance attributes width and height
-and property and setter for both
+instance attributes width and height,
+property and setter for both, and public
+methods to calculate area and perimeter.
 """
 
 
 class Rectangle:
     """
-    Defines a rectangle with private
-    instance attributes width and height.
+    Defines a rectangle with private instance attributes width and height,
+    and methods to calculate area and perimeter.
     """
 
     def __init__(self, width=0, height=0):
         """
         Initializes a new Rectangle instance.
         Args:
-            width (int): The width.
-            height (int): The height .
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
         """
         self.width = width
         self.height = height
@@ -25,7 +27,7 @@ class Rectangle:
     @property
     def width(self):
         """
-        Retrieves the width.
+        Retrieves the width of the rectangle.
         """
         return self.__width
 
@@ -67,3 +69,18 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
+
+    def area(self):
+        """
+        Returns the area of the rectangle.
+        """
+        return self.__width * self.__height
+
+    def perimeter(self):
+        """
+        Returns the perimeter of the rectangle.
+        If width or height is equal to 0, perimeter is 0.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return 0
+        return 2 * (self.__width + self.__height)
