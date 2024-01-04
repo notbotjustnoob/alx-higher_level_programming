@@ -3,14 +3,17 @@
 Defines a class Rectangle with private
 instance attributes width and height,
 property and setter for both, and public
-methods to calculate area and perimeter.
+methods to calculate area and perimeter,
+and to provide a string representation
+of the rectangle.
 """
 
 
 class Rectangle:
     """
     Defines a rectangle with private instance attributes width and height,
-    and methods to calculate area and perimeter.
+    and methods to calculate area and perimeter, and to provide a string
+    representation of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
@@ -83,3 +86,19 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
+
+    def __str__(self):
+        """
+        Returns a string representation of the rectangle.
+        Represents the rectangle using the '#' character.
+        """
+        if self.__width == 0 or self.__height == 0:
+            return ""
+
+        rectangle_str = []
+        for h in range(self.__height):
+            rectangle_str.append("#" * self.__width)
+            if h != self.__height - 1:
+                rectangle_str.append("\n")
+
+        return "".join(rectangle_str)
