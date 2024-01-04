@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Module 1-rectangle
-Defines a class Rectangle with private 
+Defines a class Rectangle with private
 instance attributes width and height
 and property and setter for both
 """
@@ -9,7 +9,7 @@ and property and setter for both
 
 class Rectangle:
     """
-    Defines a rectangle with private 
+    Defines a rectangle with private
     instance attributes width and height.
     """
 
