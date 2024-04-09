@@ -1,0 +1,18 @@
+>>> from 5-text_indentation import text_indentation
+>>> text_indentation("Hello. How are you?")
+Hello.
+How are you?
+
+>>> text_indentation("One. Two. Three.")
+One.
+Two.
+Three.
+
+>>> text_indentation("This is a sentence without any punctuation")
+This is a sentence without any punctuation
+
+>>> text_indentation("A? B: C. D")
+A?
+B:
+C.
+D
